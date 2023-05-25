@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Security camera stream</title>
+</head>
+<body>
+    <ul id="navigation">
+    {% set navigation = [('', 'Home'), ('video_feed', 'Video Feed')] %}
+
+    {% for item in navigation %}
+        <li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h1>Splash page for Video Feed</h1>
+
+    {# a comment #}
+</body>
+</html>
