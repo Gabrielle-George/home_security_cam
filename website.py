@@ -20,12 +20,7 @@ def gen():
     vc = cv2.VideoCapture(0)
     err_arr =cv2.imread("error.jpg")
     error_img = cv2.imencode('.jpg', err_arr)[1].tobytes()
-    vc.set(cv2.CAP_PROP_FPS, 10)
-    ret, prev_frame = vc.read()
-    prev_frame_ds = cv2.pyrDown(prev_frame)
-    prev_frame_ds_blurred = cv2.GaussianBlur(prev_frame_ds,(5,5),cv2.BORDER_DEFAULT)
-    ret, cur_frame = vc.read()
-    
+    vc.set(cv2.CAP_PROP_FPS, 10) 
     while True:
         rval, cur_frame = vc.read()
         if rval:            
